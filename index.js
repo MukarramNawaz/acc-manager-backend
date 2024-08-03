@@ -6,7 +6,7 @@ const app = express();
 const appRoutes = require("./routes/accManagerRoutes");
 const Path = require("path");
 const bodyParser = require('body-parser');
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 // Middleware
 app.use(express.json());
