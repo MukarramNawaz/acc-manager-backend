@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config();
+ const dotenv = require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -17,7 +17,11 @@ app.use (cors(
 app.use(bodyParser.json());
 app.use ("", appRoutes)
 
+app.get ('/',(req, res) => {
 
+    res.send("backend working");
+ 
+};)
 // Connect to MongoDB and Start the server after connection to DB
 mongoose.connect(process.env.MONGO_URI, {
 })
